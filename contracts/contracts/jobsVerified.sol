@@ -20,8 +20,14 @@ interface IAnonAadhaarVerifier {
 
 contract LGBTQJobMarketVerified {
     // Struct to represent a job posting
+
+    // Sepolia
+    // address public EPNS_COMM_ADDRESS =
+    //     0x0C34d54a09CFe75BCcd878A469206Ae77E0fe6e7;
+
+    // Arb Goerli
     address public EPNS_COMM_ADDRESS =
-        0x0C34d54a09CFe75BCcd878A469206Ae77E0fe6e7;
+        0xb3971BCef2D791bc4027BbfedFb47319A4AAaaAa;
     struct JobPosting {
         address employer; // Address of the company posting the job
         string jobTitle;
@@ -104,10 +110,14 @@ contract LGBTQJobMarketVerified {
         // address anonAadhaarVerifierAddr = 0xc3EDAEc6A47a137a7DF4C2786728A048dDE73978;
 
         // Seploia AnonAadharVerifier: 0x77a1c4bBf8cd126D38B53014040435CCAA467158
-        address anonAadhaarVerifierAddr = 0x77a1c4bBf8cd126D38B53014040435CCAA467158;
+        // address anonAadhaarVerifierAddr = 0x77a1c4bBf8cd126D38B53014040435CCAA467158;
 
         // Scroll AnonAadharVerifier: 0xc3EDAEc6A47a137a7DF4C2786728A048dDE73978
         // address anonAadhaarVerifierAddr = 0xc3EDAEc6A47a137a7DF4C2786728A048dDE73978;
+
+       // Arb Goerli AnonAadharVerifier: 0xc3EDAEc6A47a137a7DF4C2786728A048dDE73978
+        address anonAadhaarVerifierAddr = 0xc3EDAEc6A47a137a7DF4C2786728A048dDE73978;
+        
         return
             IAnonAadhaarVerifier(anonAadhaarVerifierAddr).verifyProof(
                 _pA,

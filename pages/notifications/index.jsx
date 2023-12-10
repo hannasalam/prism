@@ -7,6 +7,7 @@ import { ethers } from "ethers";
 
 export default function JobsPage() {
   const [notifications, setNotifications] = React.useState([]);
+  
   const fetchNotifications = async () => {
     if (!window?.ethereum) {
       alert("Please install metamask");
@@ -42,7 +43,7 @@ export default function JobsPage() {
         <div className={"jobs__heading"}>NOTIFICATIONS</div>
         <div className={"jobs__list"}>
           {notifications.map((notification) => {
-            return <NotificationCard notification={notification} />;
+            return <NotificationCard notification={notification} key={notification.sid}/>;
           })}
         </div>
       </div>

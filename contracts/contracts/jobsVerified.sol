@@ -105,6 +105,9 @@ contract LGBTQJobMarketVerified {
 
         // Seploia AnonAadharVerifier: 0x77a1c4bBf8cd126D38B53014040435CCAA467158
         address anonAadhaarVerifierAddr = 0x77a1c4bBf8cd126D38B53014040435CCAA467158;
+
+        // Scroll AnonAadharVerifier: 0xc3EDAEc6A47a137a7DF4C2786728A048dDE73978
+        // address anonAadhaarVerifierAddr = 0xc3EDAEc6A47a137a7DF4C2786728A048dDE73978;
         return
             IAnonAadhaarVerifier(anonAadhaarVerifierAddr).verifyProof(
                 _pA,

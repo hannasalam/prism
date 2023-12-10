@@ -27,7 +27,7 @@ export default function JobCard({ job }) {
         <div class="job_card_job_title">{job.role}</div>
         <div class="job_card_company_name">{job.company_name}</div>
         <div class="job_card_skills_container">
-          {job.tags.map((skill) => {
+          {job.tags?.map((skill) => {
             return <div class="job_card_skill">{skill}</div>;
           })}
         </div>

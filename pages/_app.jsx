@@ -130,19 +130,27 @@ function MyComponent({ Component, pageProps }) {
 
 		if (
 			window &&
-			!address &&
-			window.location.pathname !== '/' &&
-			anonAadhaar.status === 'logged-out'
-		) {
-			window.location.href = '/';
-		} else if (
-			window &&
-			window.location.pathname === '/' &&
 			address &&
 			anonAadhaar.status === 'logged-in'
 		) {
 			loginInit();
 		}
+
+		// if (
+		// 	window &&
+		// 	!address &&
+		// 	window.location.pathname !== '/' &&
+		// 	anonAadhaar.status === 'logged-out'
+		// ) {
+		// 	window.location.href = '/';
+		// } else if (
+		// 	window &&
+		// 	window.location.pathname === '/' &&
+		// 	address &&
+		// 	anonAadhaar.status === 'logged-in'
+		// ) {
+		// 	loginInit();
+		// }
 	}, [anonAadhaar]);
 
 	return <Component {...pageProps} />;

@@ -62,7 +62,7 @@ function JobDetailsModal({ open, handleClose, job }) {
             <div className={"job_info_field"}>
               <div className={"job_info_input__label"}>Tags*</div>
               <div className={"job_info_modal_input"}>
-                <input type="text" value={job.tags.join(" , ")} disabled />
+                <input type="text" value={job.tags?.join(" , ")} disabled />
               </div>
             </div>
           </div>

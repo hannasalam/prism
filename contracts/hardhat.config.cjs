@@ -19,6 +19,16 @@ module.exports = {
     sepolia: {
       url: process.env.SEPOLIA_RPC_URI,
       accounts: [process.env.PRIVATE_KEY]
-    }
+    },
+
+    scroll: {
+      url: process.env.SCROLL_RPC_URI,
+      accounts: [process.env.PRIVATE_KEY]
+    },
+
+    arbGoerli: {
+      url: process.env.ARB_GOERLI_RPC_URI,
+      accounts: [process.env.PRIVATE_KEY]
+    },
   }
 };
